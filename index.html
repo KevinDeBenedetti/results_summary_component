@@ -3,26 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Results summary component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+<!--  <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style>-->
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            LightRed: 'hsl(0, 100%, 67%)',
+            OrangeYellow: 'hsl(39, 100%, 56%)',
+            GreenTeal: 'hsl(166, 100%, 37%)',
+            CobaltBlue: 'hsl(234, 85%, 45%)',
+            LightSlateBlue: 'hsl(252, 100%, 67%)',
+            LightRoyalBlue: 'hsl(241, 81%, 54%)',
+            VioletBlue: 'hsla(256, 72%, 46%, 1)',
+            PersianBlue: 'hsla(241, 72%, 46%, 0)',
+            White: 'hsl(0, 0%, 100%)',
+            PaleBlue: 'hsl(221, 100%, 96%)',
+            LightLavender: 'hsl(241, 100%, 89%)',
+            DarkGrayBlue: 'hsl(224, 30%, 27%)'
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body>
 
-  Your Result
-  76
-  of 100
+  <div class="flex">
+    <img src="./design/mobile-design.jpg" alt="">
+    <section class="h-[809px] w-[375px] ">
+      <div class="h-[355px] bg-LightRoyalBlue rounded-b-[25px]">
+        Your Result
+        <div class="rounded-full h-[135px]">
+          <span class="text-White">76</span>
+          <span>of 100</span>
+        </div>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
+
+
+        Great
+        You scored higher than 65% of the people who have taken these tests.
+
+      </div>
+      <div>
+
+      </div>
+    </section>
+  </div>
+
+
   Summary
 
   Reaction
@@ -44,4 +84,6 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
+
 </html>
