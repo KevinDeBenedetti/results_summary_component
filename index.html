@@ -49,32 +49,32 @@
 
 <body>
 
-  <main class="flex justify-center h-screen desktop:items-center">
+  <main class="flex justify-center desktop:items-center h-screen bg-[#ECF2FF] relative">
 
-    <section class="desktop:flex h-[809px] desktop:h-[512px] max-w-[375px] desktop:max-w-[736px] text-[18px] bg-White font-hanken">
+    <section class="desktop:rounded-[32px] desktop:flex h-[809px] desktop:h-[512px] max-w-[375px] desktop:max-w-[736px] text-[18px] bg-White font-hanken">
 
-      <div class="flex flex-col items-center h-[356px] rounded-bl-[32px] rounded-br-[32px] shadow" style="background: linear-gradient(180deg, #7755FF 0%, #6943FF 0%, #2F2CE9 100%); box-shadow: 0px 30px 60px rgba(60.93, 107.87, 235.88, 0.15);">
+      <div class="flex flex-col items-center h-[356px] desktop:h-full rounded-bl-[32px] desktop:rounded-[32px] rounded-br-[32px] shadow" style="background: linear-gradient(180deg, #7755FF 0%, #6943FF 0%, #2F2CE9 100%); box-shadow: 0px 30px 60px rgba(60.93, 107.87, 235.88, 0.15);">
 
-        <p class="text-LightLavender font-bold font-bold pt-6">Your Result</p>
+        <p class="text-LightLavender font-bold font-bold pt-6 desktop:text-2xl">Your Result</p>
 
-        <div class="mt-6 flex flex-col justify-center items-center rounded-full h-[140px] w-[140px]" style="background: linear-gradient(180deg, #4D21C9 0%, rgba(36.82, 33.47, 200.81, 0) 100%, rgba(36.82, 33.47, 200.81, 0) 100%)">
+        <div class="mt-6 desktop:mt-[35px] flex flex-col justify-center items-center rounded-full h-[140px] desktop:h-[200px] w-[140px] desktop:w-[200px]" style="background: linear-gradient(180deg, #4D21C9 0%, rgba(36.82, 33.47, 200.81, 0) 100%, rgba(36.82, 33.47, 200.81, 0) 100%)">
 
-          <span class="text-White text-[56px] font-extrabold">76</span>
+          <span class="text-White text-[56px] desktop:text-7xl font-extrabold">76</span>
 
-          <span class="font-bold text-LightLavender opacity-50 text-base">of 100</span>
+          <span class="font-bold text-LightLavender opacity-50 text-base desktop:text-lg">of 100</span>
         </div>
 
-        <p class="mt-6 text-xl text-White font-bold">Great</p>
+        <p class="mt-6 desktop:mt-7 text-xl text-White font-bold">Great</p>
 
-        <p class="mt-2 ml-[58px] mr-[57px] h-[42px] text-base text-LightLavender">You scored higher than 65% of the people who have taken these tests.</p>
+        <p class="mt-2 desktop:mt-3.5 ml-[58px] mr-[57px] h-[42px] text-base desktop:text-lg text-LightLavender desktop:text-center">Your performance exceed 65% of the people conducting the test here!</p>
 
       </div>
 
       <div class="mt-6 mx-[30px]">
 
-        <h2 class="pl-[2px]">Summary</h2>
+        <h2 class="pl-[2px] desktop:text-2xl">Summary</h2>
 
-        <div class="border-0 border-[#E7E7E7] mt-6 flex items-center justify-between h-[56px] rounded-[12px] bg-LightRed bg-opacity-5">
+        <div class="border-0 border-[#E7E7E7] mt-6 desktop:mt-7 flex items-center justify-between h-[56px] rounded-[12px] bg-LightRed bg-opacity-5">
 
           <div class="flex items-center">
 
@@ -142,7 +142,7 @@
 
         </div>
 
-        <button class="h-14 w-[315px] bg-DarkGrayBlue mt-6 rounded-[128px] text-White font-bold">
+        <button class="h-14 w-[315px] bg-DarkGrayBlue mt-6 desktop:mt-[41px] rounded-[128px] text-White font-bold">
           Continue
         </button>
 
@@ -150,12 +150,12 @@
 
     </section>
 
-  </main>
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </main>
 
 </body>
 
