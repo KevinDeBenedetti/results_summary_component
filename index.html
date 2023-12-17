@@ -11,18 +11,9 @@
   
   <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-
   <script>
     tailwind.config = {
       theme: {
-        screens: {
-          'desktop': '1440px'
-        },
         fontFamily: {
           'hanken': ['Hanken Grotesk', 'sans-serif']
         },
@@ -32,8 +23,8 @@
             OrangeYellow: 'hsl(39, 100%, 56%)',
             GreenTeal: 'hsl(166, 100%, 37%)',
             CobaltBlue: 'hsl(234, 85%, 45%)',
-            LightSlateBlue: 'hsl(252, 100%, 67%)',
-            LightRoyalBlue: 'hsl(241, 81%, 54%)',
+            LightSlateBlue: 'hsla(252, 100%, 67%, 100%)',
+            LightRoyalBlue: 'hsla(241, 81%, 54%, 100%)',
             VioletBlue: 'hsla(256, 72%, 46%, 1)',
             PersianBlue: 'hsla(241, 72%, 46%, 0)',
             White: 'hsl(0, 0%, 100%)',
@@ -49,38 +40,39 @@
 
 <body>
 
-  <main class="flex justify-center desktop:items-center h-screen bg-[#ECF2FF] relative">
+  <main class="flex flex-col items-center justify-center h-screen bg-[#ECF2FF]">
 
-    <section class="desktop:rounded-[32px] desktop:flex h-[809px] desktop:h-[512px] max-w-[375px] desktop:max-w-[736px] text-[18px] bg-White font-hanken">
+    <section class="h-[809px] w-full md:rounded-[32px] md:flex md:h-[512px] md:w-[736px] text-[18px] bg-White font-hanken shadow-[0_30px_60px_0px_rgba(61,108,236,0.15)]">
 
-      <div class="flex flex-col items-center h-[356px] desktop:h-full rounded-bl-[32px] desktop:rounded-[32px] rounded-br-[32px] shadow" style="background: linear-gradient(180deg, #7755FF 0%, #6943FF 0%, #2F2CE9 100%); box-shadow: 0px 30px 60px rgba(60.93, 107.87, 235.88, 0.15);">
+      <div class="flex flex-col items-center h-[356px] md:h-full md:w-[368px] rounded-bl-[32px] md:rounded-[32px] rounded-br-[32px] bg-gradient-to-b from-LightSlateBlue to-LightRoyalBlue">
 
-        <p class="text-LightLavender font-bold font-bold pt-6 desktop:text-2xl">Your Result</p>
+        <p class="text-LightLavender font-bold font-bold mt-6 md:text-2xl">Your Result</p>
 
-        <div class="mt-6 desktop:mt-[35px] flex flex-col justify-center items-center rounded-full h-[140px] desktop:h-[200px] w-[140px] desktop:w-[200px]" style="background: linear-gradient(180deg, #4D21C9 0%, rgba(36.82, 33.47, 200.81, 0) 100%, rgba(36.82, 33.47, 200.81, 0) 100%)">
+        <div class="mt-6 md:mt-[35px] flex flex-col justify-center items-center rounded-full h-[140px] md:h-[200px] w-[140px] md:w-[200px] bg-gradient-to-b from-VioletBlue to-PersianBlue">
 
-          <span class="text-White text-[56px] desktop:text-7xl font-extrabold">76</span>
+          <span class="text-White text-[56px] md:text-7xl font-extrabold">76</span>
 
-          <span class="font-bold text-LightLavender opacity-50 text-base desktop:text-lg">of 100</span>
+          <span class="font-bold text-LightLavender opacity-50 text-base md:text-lg">of 100</span>
+
         </div>
 
-        <p class="mt-6 desktop:mt-7 text-xl text-White font-bold">Great</p>
+        <p class="mt-6 md:mt-7 text-[24px] md:text-[32px] text-White font-bold">Great</p>
 
-        <p class="mt-2 desktop:mt-3.5 ml-[58px] mr-[57px] h-[42px] text-base desktop:text-lg text-LightLavender desktop:text-center">Your performance exceed 65% of the people conducting the test here!</p>
+        <p class="mt-2 md:mt-3.5 ml-[58px] mr-[57px] md:mx-[34px] mb-[40px] h-[42px] text-base font-medium md:text-lg text-LightLavender text-center">Your performance exceed 65% of the people conducting the test here!</p>
 
       </div>
 
-      <div class="mt-6 mx-[30px]">
+      <div class="mt-6 md:mt-[38px] mx-[30px] mb-[30px] md:mx-auto flex flex-col items-center">
 
-        <h2 class="pl-[2px] desktop:text-2xl">Summary</h2>
+        <h2 class="pl-[2px] md:text-2xl w-full font-bold text-[18px]">Summary</h2>
 
-        <div class="border-0 border-[#E7E7E7] mt-6 desktop:mt-7 flex items-center justify-between h-[56px] rounded-[12px] bg-LightRed bg-opacity-5">
+        <div class="w-full border-0 border-[#E7E7E7] mt-6 md:mt-7 flex items-center justify-between md:w-[288px] h-[56px] rounded-[12px] bg-LightRed bg-opacity-5">
 
           <div class="flex items-center">
 
             <img class="ml-4 h-5 w-5" src="./assets/images/icon-reaction.svg" alt="icon reaction">
 
-            <p class="ml-3 text-LightRed font-medium">Reaction</p>
+            <p class="ml-3 text-LightRed font-medium text-[16px]">Reaction</p>
 
           </div>
 
@@ -91,13 +83,13 @@
 
         </div>
 
-        <div class="border-0 border-[#E7E7E7] mt-4 flex items-center justify-between h-[56px] rounded-[12px] bg-OrangeYellow bg-opacity-5">
+        <div class="w-full border-0 border-[#E7E7E7] mt-4 flex items-center justify-between md:w-[288px] h-[56px] rounded-[12px] bg-OrangeYellow bg-opacity-5">
 
           <div class="flex items-center">
 
             <img class="ml-4 h-5 w-5" src="./assets/images/icon-memory.svg" alt="icon reaction">
 
-            <p class="ml-3 text-OrangeYellow font-medium">Memory</p>
+            <p class="ml-3 text-OrangeYellow font-medium text-[16px]">Memory</p>
 
           </div>
 
@@ -108,13 +100,13 @@
 
         </div>
 
-        <div class="border-0 border-[#E7E7E7] mt-4 flex items-center justify-between h-[56px] rounded-[12px] bg-GreenTeal bg-opacity-5">
+        <div class="w-full border-0 border-[#E7E7E7] mt-4 flex items-center justify-between md:w-[288px] h-[56px] rounded-[12px] bg-GreenTeal bg-opacity-5">
 
           <div class="flex items-center">
 
             <img class="ml-4 h-5 w-5" src="./assets/images/icon-verbal.svg" alt="icon reaction">
 
-            <p class="ml-3 text-GreenTeal font-medium">Verbal</p>
+            <p class="ml-3 text-GreenTeal font-medium text-[16px]">Verbal</p>
 
           </div>
 
@@ -125,13 +117,13 @@
 
         </div>
 
-        <div class="border-0 border-[#E7E7E7] mt-4 flex items-center justify-between h-[56px] rounded-[12px] bg-CobaltBlue bg-opacity-5">
+        <div class="w-full border-0 border-[#E7E7E7] mt-4 flex items-center justify-between md:w-[288px] h-[56px] rounded-[12px] bg-CobaltBlue bg-opacity-5">
 
           <div class="flex items-center">
 
             <img class="ml-4 h-5 w-5" src="./assets/images/icon-visual.svg" alt="icon reaction">
 
-            <p class="ml-3 text-CobaltBlue font-medium">Visual</p>
+            <p class="ml-3 text-CobaltBlue font-medium text-[16px]">Visual</p>
 
           </div>
 
@@ -142,7 +134,7 @@
 
         </div>
 
-        <button class="h-14 w-[315px] bg-DarkGrayBlue mt-6 desktop:mt-[41px] rounded-[128px] text-White font-bold">
+        <button class="h-14 w-full md:w-[288px] h-[56px] bg-DarkGrayBlue mt-6 md:mt-[41px] rounded-[128px] text-White font-bold hover:bg-gradient-to-b from-LightSlateBlue to-LightRoyalBlue">
           Continue
         </button>
 
@@ -150,9 +142,9 @@
 
     </section>
 
-    <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+    <footer class="text-xs text-center my-10">
+      Challenge by <a class="text-LightRoyalBlue" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#" class="text-CobaltBlue hover:text-GreenTeal hover:underline">Kevin De Benedetti</a>.
     </footer>
 
   </main>
